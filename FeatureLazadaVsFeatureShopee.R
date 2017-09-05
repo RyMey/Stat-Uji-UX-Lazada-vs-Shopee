@@ -1,0 +1,16 @@
+#test tiap fitur
+lazada_aspek <- read.csv("~/Documents/IPB-Laptop/MPTP/lazada_aspek.csv",header = TRUE, sep = ",")
+shopee_aspek <- read.csv("~/Documents/IPB-Laptop/MPTP/shopee_aspek.csv",header = TRUE, sep = ",")
+
+t.test(lazada_aspek$kemudahan_navigasi,shopee_aspek$kemudahan_navigasi,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$atraktif_desain,shopee_aspek$atraktif_desain,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$mudah_digunakan,shopee_aspek$mudah_digunakan,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$fitur_berfungsi,shopee_aspek$fitur_berfungsi,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$antarmuka_jelas_dan_menarik,shopee_aspek$antarmuka_jelas_dan_menarik,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$mudah_dipelajari,shopee_aspek$mudah_dipelajari,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$efisien,shopee_aspek$efisien,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$akses_standar,shopee_aspek$akses_standar,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$mudah_diingat,shopee_aspek$mudah_diingat,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$keamanan,shopee_aspek$keamanan,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$bantuan_dan_dukungan,shopee_aspek$bantuan_dan_dukungan,alternative = "two.sided",paired = TRUE)
+t.test(lazada_aspek$kepuasan_dan_kesan,shopee_aspek$kepuasan_dan_kesan,alternative = "two.sided",paired = TRUE)
