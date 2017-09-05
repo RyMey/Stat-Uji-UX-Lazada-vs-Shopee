@@ -20,21 +20,21 @@ plotNormalHistogram(lazada_aspek$atraktif_desain)
 plotNormalHistogram(lazada_aspek$mudah_digunakan)
     #transform t^2
 T_2_3 = lazada_aspek$mudah_digunakan*lazada_aspek$mudah_digunakan
-plotNormalHistogram(T_2_2)
+plotNormalHistogram(T_2_3)
     #transform t^3
 T_3_3 = lazada_aspek$mudah_digunakan*lazada_aspek$mudah_digunakan*lazada_aspek$mudah_digunakan
-plotNormalHistogram(T_3_2)
-    #move t^3 to feature 2  
+plotNormalHistogram(T_3_3)
+    #move t^3 to feature 3 
 lazada_aspek$mudah_digunakan <- T_3_3
 
   #fitur 4
 plotNormalHistogram(lazada_aspek$fitur_berfungsi)
     #transform t^2
 T_2_4 = lazada_aspek$fitur_berfungsi*lazada_aspek$fitur_berfungsi
-plotNormalHistogram(T_2_3)
+plotNormalHistogram(T_2_4)
     #transform t^3
 T_3_4 = lazada_aspek$fitur_berfungsi*lazada_aspek$fitur_berfungsi*lazada_aspek$fitur_berfungsi
-plotNormalHistogram(T_3_3)
+plotNormalHistogram(T_3_4)
     #move t^3 to feature 3
 lazada_aspek$fitur_berfungsi <- T_3_4
   
@@ -83,3 +83,6 @@ plotNormalHistogram(T_2_12)
 T_3_12 = lazada_aspek$kepuasan_dan_kesan*lazada_aspek$kepuasan_dan_kesan*lazada_aspek$kepuasan_dan_kesan
 plotNormalHistogram(T_3_12)
   #move t^3 to feature 12
+lazada_aspek$kepuasan_dan_kesan <- T_3_12
+
+write.csv(lazada_aspek, "/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/lazada.csv")
