@@ -1,5 +1,5 @@
-shopee <- read.csv("~/Documents/IPB-Laptop/MPTP/shopee_aspek.csv",header = TRUE, sep = ",")
-lazada <- read.csv("~/Documents/IPB-Laptop/MPTP/lazada_aspek.csv",header = TRUE, sep = ",")
+shopee <- read.csv("/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/shopee.csv",header = TRUE, sep = ",")
+lazada <- read.csv("/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/lazada.csv",header = TRUE, sep = ",")
 profesi <- read.csv("/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/profesi.csv",header = TRUE, sep = ",")
 
 mahasiswa_shopee <- shopee[which(profesi==1 | profesi==3),]
@@ -9,17 +9,14 @@ karyawan_shopee <- shopee[which(profesi==2 | profesi==3),]
 karyawan_lazada <- lazada[which(profesi==2 | profesi==3),]
 
 
-write.csv(mahasiswa_shopee, "/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/mahasiswa_s.csv")
-write.csv(mahasiswa_lazada, "/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/mahasiswa_l.csv")
-write.csv(karyawan_shopee, "/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/karyawan_s.csv")
-write.csv(karyawan_lazada, "/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/karyawan_l.csv")
+write.csv(mahasiswa_shopee, "/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/mahasiswa_s1.csv")
+write.csv(mahasiswa_lazada, "/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/mahasiswa_l1.csv")
+write.csv(karyawan_shopee, "/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/karyawan_s1.csv")
+write.csv(karyawan_lazada, "/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/karyawan_l1.csv")
 
-karyawan <- read.csv("/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/karyawan.csv",header = TRUE, sep = ",")
-mahasiswa <- read.csv("/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/mahasiswa.csv",header = TRUE, sep = ",")
+karyawan <- read.csv("/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/karyawan1.csv",header = TRUE, sep = ",")
+mahasiswa <- read.csv("/Users/macbookair/Documents/Data\ Scientists/LazadaVsShopee/mahasiswa1.csv",header = TRUE, sep = ",")
 
-selisih <- mahasiswa[,1]-karyawan[,1]
-library(rcompanion)
-plotNormalHistogram(selisih)
 t.test(mahasiswa$kemudahan_navigasi,karyawan$kemudahan_navigasi,alternative = "two.sided",paired = TRUE)
 
 
